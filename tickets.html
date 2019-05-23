@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>سیستم ثبت شکایات و انتقادات</title>
+
+    <link href="semantic/dist/semantic.rtl.min.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <script src="node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="semantic/dist/semantic.min.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+
+</head>
+<body>
+<div class="context admin-menu" style="height: 100%">
+    <div class="ui top fixed menu">
+        <div class="item menu-item">
+            <i class="sidebar icon"></i>
+        </div>
+        <div class="ui dropdown icon item">
+            <i class="user icon"></i>
+            <div class="menu">
+                <div class="item">
+                    <span>ادمین</span>
+                </div>
+                <div class="divider"></div>
+                <div class="item">خروج</div>
+            </div>
+        </div>
+        <div class="item"><span>ادمین</span></div>
+        <div class="right menu site-branding">
+            <div class="item">
+                <span class="site-name">سیستم ثبت شکایات و انتقادات</span>
+                <img src="images/logo.png" class="site-logo">
+            </div>
+        </div>
+    </div>
+
+    <div class="ui bottom attached segment pushable">
+        <div class="ui left demo vertical inverted sidebar labeled icon menu">
+
+            <a class="item" href="http://localhost/~farzad/ticket/setting.html">
+                <i class="settings icon"></i>
+                <span>تنظیمات</span>
+            </a>
+            <a class="item" href="http://localhost/~farzad/ticket/users.html">
+                <i class="users icon"></i>
+                <span>کاربران</span>
+            </a>
+            <a class="item active" href="http://localhost/~farzad/ticket/tickets.html">
+                <i class="list icon"></i>
+                <span>درخواست‌ها</span>
+            </a>
+        </div>
+        <div class="pusher">
+
+            <div class="ui container" style="margin-top: 100px">
+
+                <div id="tickets" class="ui segment">
+                    <h1 class="ui dividing header">
+                        <i class="list icon"></i>
+                        <div class="content">
+                            <span>درخواست‌ها</span>
+                        </div>
+                    </h1>
+
+                    <div>
+                        <table class="ui celled striped table">
+                            <thead>
+                            <tr>
+                                <th>کد</th>
+                                <th>تاریخ ایجاد</th>
+                                <th>آدرس ایمیل</th>
+                                <th>وضعیت</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>۱</td>
+                                <td>September 14, 2013</td>
+                                <td>jhlilk22@yahoo.com</td>
+                                <td>
+                                    <div class="ui red horizontal label">غیر فعال</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>۲</td>
+                                <td>January 11, 2014</td>
+                                <td>jamieharingonton@yahoo.com</td>
+                                <td>
+                                    <div class="ui green horizontal label">فعال</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>۳</td>
+                                <td>May 11, 2014</td>
+                                <td>jilsewris22@yahoo.com</td>
+                                <td>
+                                    <div class="ui red horizontal label">غیر فعال</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>۴</td>
+                                <td>September 14, 2013</td>
+                                <td>jhlilk22@yahoo.com</td>
+                                <td>
+                                    <div class="ui green horizontal label">فعال</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>۵</td>
+                                <td>September 14, 2013</td>
+                                <td>jhlilk22@yahoo.com</td>
+                                <td>
+                                    <div class="ui green horizontal label">فعال</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>۶</td>
+                                <td>January 11, 2014</td>
+                                <td>jamieharingonton@yahoo.com</td>
+                                <td>
+                                    <div class="ui red horizontal label">غیر فعال</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>۷</td>
+                                <td>May 11, 2014</td>
+                                <td>jilsewris22@yahoo.com</td>
+                                <td>
+                                    <div class="ui green horizontal label">فعال</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>۸</td>
+                                <td>September 14, 2013</td>
+                                <td>jhlilk22@yahoo.com</td>
+                                <td>
+                                    <div class="ui green horizontal label">فعال</div>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <th colspan="4">
+                                    <div class="ui right floated pagination menu">
+                                        <a class="icon item">
+                                            <i class="left chevron icon"></i>
+                                        </a>
+                                        <a class="item">1</a>
+                                        <a class="item">2</a>
+                                        <a class="item">3</a>
+                                        <a class="item">4</a>
+                                        <a class="icon item">
+                                            <i class="right chevron icon"></i>
+                                        </a>
+                                    </div>
+                                </th>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="ui segment">
+                    <h1 class="ui dividing header">فرم ثبت شکایات و انتقادات</h1>
+
+                    <div class="ui accordion">
+                        <div class="title ui primary button">
+                            <i class="dropdown icon"></i>
+                            <span>ایحاد درخواست جدید</span>
+                        </div>
+                        <div class="content">
+                            <div class="ui divider"></div>
+                            <div class="transition visible">
+                                <form class="ui form" id="complete-form-form">
+
+                                    <div class="two fields">
+                                        <div class="field">
+                                            <label>استان</label>
+                                            <select class="ui fluid dropdown" id="selectProvince">
+                                                <option value="">استان</option>
+                                            </select>
+                                        </div>
+                                        <div class="field">
+                                            <label>شهر</label>
+                                            <select class="ui fluid dropdown" id="selectCity">
+                                                <option value="">شهر</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="two fields">
+                                        <div class="field">
+                                            <label>اماکن</label>
+                                            <select class="ui fluid dropdown" id="selectTourism">
+                                                <option value="">اماکن</option>
+                                            </select>
+                                        </div>
+                                        <div class="field">
+                                            <label>دسته بندی</label>
+                                            <select class="ui fluid dropdown" id="selectCategory">
+                                                <option value="">دسته بندی</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="two fields">
+                                        <div class="field">
+                                            <label>جستجوی عنوان</label>
+                                            <select class="ui fluid search dropdown" multiple="" id="selectTopic">
+                                                <option value="">جستجوی عنوان</option>
+                                            </select>
+                                        </div>
+                                        <div class="field">
+                                            <label>موبایل</label>
+                                            <input type="text" name="mobile" placeholder="موبایل">
+                                        </div>
+                                    </div>
+
+                                    <div class="two fields">
+                                        <div class="field">
+                                            <label>نام</label>
+                                            <input type="text" name="firstname" placeholder="نام">
+                                        </div>
+                                        <div class="field">
+                                            <label>نام خانوادگی</label>
+                                            <input type="text" name="lastname" placeholder="نام خانوادگی">
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <label>توضیحات</label>
+                                        <textarea id="answers" required></textarea>
+                                    </div>
+                                    <button class="fluid ui primary button" type="submit">ثبت درخواست</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ticket-detail" class="ui modal">
+                    <i class="close icon"></i>
+                    <h1 class="ui top attached header">جزییات درخواست</h1>
+
+                    <div class="content ticket-detail">
+                        <div class="ui grid container">
+                            <div class="eight wide column">
+                                <h5 class="ui header">
+                                    <span>استان: </span>
+                                    <span class="sub header">تهران</span>
+                                </h5>
+                            </div>
+                            <div class="eight wide column">
+                                <h5 class="ui header">
+                                    <span>شهر: </span>
+                                    <span class="sub header">تهران</span>
+                                </h5>
+                            </div>
+                            <div class="eight wide column">
+                                <h5 class="ui header">
+                                    <span>اماکن: </span>
+                                    <span class="sub header">مراکز اقامتی</span>
+                                </h5>
+                            </div>
+                            <div class="eight wide column">
+                                <h5 class="ui header">
+                                    <span>دسته بندی: </span>
+                                    <span class="sub header">هتل</span>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <h3 class="ui dividing header" style="padding-left: 15px; padding-right: 15px">جواب‌های درخواست</h3>
+                    <div class="scrolling content ticket-answers">
+                        <div class="ui small minimal comments" style="max-width: 100%">
+                            <div class="comment user-comment">
+                                <span class="avatar">
+                                    <i class="large user icon"></i>
+                                    <span>کاربر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">فرزاد مهانیان</span>
+                                    <div class="metadata">
+                                        <span class="date">امروز ۱۲:۳۰</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment user-comment">
+                                <span class="avatar">
+                                    <i class="large user icon"></i>
+                                    <span>کاربر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">فرزاد مهانیان</span>
+                                    <div class="metadata">
+                                        <span class="date">امروز ۱۲:۳۰</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment admin-comment">
+                                <span class="avatar">
+                                    <i class="large user secret icon"></i>
+                                    <span>مدیر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">نیما بغدادی</span>
+                                    <div class="metadata">
+                                        <span class="date">هم اکنون</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment user-comment">
+                                <span class="avatar">
+                                    <i class="large user icon"></i>
+                                    <span>کاربر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">فرزاد مهانیان</span>
+                                    <div class="metadata">
+                                        <span class="date">امروز ۱۲:۳۰</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment user-comment">
+                                <span class="avatar">
+                                    <i class="large user icon"></i>
+                                    <span>کاربر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">فرزاد مهانیان</span>
+                                    <div class="metadata">
+                                        <span class="date">امروز ۱۲:۳۰</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment admin-comment">
+                                <span class="avatar">
+                                    <i class="large user secret icon"></i>
+                                    <span>مدیر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">نیما بغدادی</span>
+                                    <div class="metadata">
+                                        <span class="date">هم اکنون</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment user-comment">
+                                <span class="avatar">
+                                    <i class="large user icon"></i>
+                                    <span>کاربر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">فرزاد مهانیان</span>
+                                    <div class="metadata">
+                                        <span class="date">امروز ۱۲:۳۰</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment user-comment">
+                                <span class="avatar">
+                                    <i class="large user icon"></i>
+                                    <span>کاربر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">فرزاد مهانیان</span>
+                                    <div class="metadata">
+                                        <span class="date">امروز ۱۲:۳۰</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment admin-comment">
+                                <span class="avatar">
+                                    <i class="large user secret icon"></i>
+                                    <span>مدیر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">نیما بغدادی</span>
+                                    <div class="metadata">
+                                        <span class="date">هم اکنون</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment user-comment">
+                                <span class="avatar">
+                                    <i class="large user icon"></i>
+                                    <span>کاربر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">فرزاد مهانیان</span>
+                                    <div class="metadata">
+                                        <span class="date">امروز ۱۲:۳۰</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment user-comment">
+                                <span class="avatar">
+                                    <i class="large user icon"></i>
+                                    <span>کاربر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">فرزاد مهانیان</span>
+                                    <div class="metadata">
+                                        <span class="date">امروز ۱۲:۳۰</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment admin-comment">
+                                <span class="avatar">
+                                    <i class="large user secret icon"></i>
+                                    <span>مدیر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">نیما بغدادی</span>
+                                    <div class="metadata">
+                                        <span class="date">هم اکنون</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment user-comment">
+                                <span class="avatar">
+                                    <i class="large user icon"></i>
+                                    <span>کاربر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">فرزاد مهانیان</span>
+                                    <div class="metadata">
+                                        <span class="date">امروز ۱۲:۳۰</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment user-comment">
+                                <span class="avatar">
+                                    <i class="large user icon"></i>
+                                    <span>کاربر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">فرزاد مهانیان</span>
+                                    <div class="metadata">
+                                        <span class="date">امروز ۱۲:۳۰</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment admin-comment">
+                                <span class="avatar">
+                                    <i class="large user secret icon"></i>
+                                    <span>مدیر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">نیما بغدادی</span>
+                                    <div class="metadata">
+                                        <span class="date">هم اکنون</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment user-comment">
+                                <span class="avatar">
+                                    <i class="large user icon"></i>
+                                    <span>کاربر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">فرزاد مهانیان</span>
+                                    <div class="metadata">
+                                        <span class="date">امروز ۱۲:۳۰</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment user-comment">
+                                <span class="avatar">
+                                    <i class="large user icon"></i>
+                                    <span>کاربر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">فرزاد مهانیان</span>
+                                    <div class="metadata">
+                                        <span class="date">امروز ۱۲:۳۰</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment admin-comment">
+                                <span class="avatar">
+                                    <i class="large user secret icon"></i>
+                                    <span>مدیر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">نیما بغدادی</span>
+                                    <div class="metadata">
+                                        <span class="date">هم اکنون</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment user-comment">
+                                <span class="avatar">
+                                    <i class="large user icon"></i>
+                                    <span>کاربر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">فرزاد مهانیان</span>
+                                    <div class="metadata">
+                                        <span class="date">امروز ۱۲:۳۰</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment user-comment">
+                                <span class="avatar">
+                                    <i class="large user icon"></i>
+                                    <span>کاربر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">فرزاد مهانیان</span>
+                                    <div class="metadata">
+                                        <span class="date">امروز ۱۲:۳۰</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment admin-comment">
+                                <span class="avatar">
+                                    <i class="large user secret icon"></i>
+                                    <span>مدیر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">نیما بغدادی</span>
+                                    <div class="metadata">
+                                        <span class="date">هم اکنون</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment user-comment">
+                                <span class="avatar">
+                                    <i class="large user icon"></i>
+                                    <span>کاربر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">فرزاد مهانیان</span>
+                                    <div class="metadata">
+                                        <span class="date">امروز ۱۲:۳۰</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment user-comment">
+                                <span class="avatar">
+                                    <i class="large user icon"></i>
+                                    <span>کاربر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">فرزاد مهانیان</span>
+                                    <div class="metadata">
+                                        <span class="date">امروز ۱۲:۳۰</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment admin-comment">
+                                <span class="avatar">
+                                    <i class="large user secret icon"></i>
+                                    <span>مدیر</span>
+                                </span>
+                                <div class="content">
+                                    <span class="author">نیما بغدادی</span>
+                                    <div class="metadata">
+                                        <span class="date">هم اکنون</span>
+                                    </div>
+                                    <div class="text">
+                                        <span>تهران در قیاس با شهرهای دیگر کشورها در ابعاد پروژه‌های عمرانی شهری مثال زدنی است و در خصوص اتوبان‌ها، پل‌ها، برج‌های سر به فلک کشیده، پارک‌ها و حتی اماکن فرهنگی و هنری نیز اینطور است.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <h3 class="ui dividing header" style="margin-bottom: 15px">ارسال پاسخ جدید</h3>
+                    <form class="ui reply form">
+                        <div class="inline fields"  style="padding: 0 15px">
+                            <label for="status">وضعیت: </label>
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="status" checked="" tabindex="0" class="hidden">
+                                    <label>فعال</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="status" tabindex="0" class="hidden">
+                                    <label>غیر فعال</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field" style="padding: 0 15px">
+                            <textarea></textarea>
+                        </div>
+                        <div class="ui primary bottom attached button" tabindex="0">
+                            <i class="icon edit"></i> <span>ارسال</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

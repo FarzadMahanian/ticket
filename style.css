@@ -1,0 +1,164 @@
+
+@font-face {
+    font-family: 'IranSans';
+    src: url(fonts/iranSans);
+    src: local("iranSans/IranSans"),
+    url(fonts/iranSans/IranSans.ttf) format("truetype"),
+    url(fonts/iranSans/IranSans.woff) format("woff"),
+    url(fonts/iranSans/IranSans.woff2) format("woff2");
+}
+
+html,
+body {
+    background-color: #f3f3f3;
+    height: 100%;
+}
+
+body {
+    padding-top: 50px;
+}
+
+html,
+body,
+input,
+.ui.dropdown {
+    font-family: IranSans, Tahoma, Arial, sans-serif !important;
+    color: #333;
+    direction: rtl;
+    text-align: right;
+}
+
+html,
+body,
+input,
+.ui.button,
+.ui.message,
+.ui.message .header,
+.ui.header,
+.ui.form textarea,
+.ui.menu,
+.ui.menu .item {
+    font-family: IranSans, Tahoma, Arial, sans-serif !important;
+    color: #333;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+#message-box {
+    position: fixed;
+    margin: 70px auto 0;
+    width: 70%;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+    #message-box {
+        width: 100%;
+    }
+}
+
+.site-branding .site-name {
+    font-family: IranSans, Tahoma, Arial, sans-serif !important;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+#message-box .ui.message {
+    display: none;
+}
+
+.ui.message > .close.icon {
+    left: .5em;
+    right: auto;
+}
+
+#enter-mobile {
+    width: 400px;
+    margin: 300px auto 0;
+    display: none;
+}
+
+#enter-password {
+    display: none;
+    width: 400px;
+    margin: 300px auto 0;
+}
+
+#complete-form {
+    margin-top: 100px;
+    /*display: none;*/
+}
+
+@media (max-width: 768px) {
+    #enter-mobile,
+    #enter-password {
+        width: 100%;
+        margin: 200px auto 0;
+    }
+
+    #complete-form {
+        margin-top: 50px;
+    }
+}
+
+.ui.table tr:hover {
+    background-color: #eee !important;
+    cursor: pointer;
+}
+
+#ticket-detail .ticket-detail .ui.header,
+#ticket-detail .ticket-detail .ui.header .sub.header {
+    display: inline-block;
+}
+
+#ticket-detail .ticket-answers {
+    background-color: #f3f3f3;
+    max-height: calc(40vh);
+}
+
+#ticket-detail .ticket-answers .user-comment {
+
+}
+
+#ticket-detail .ticket-answers .admin-comment {
+    direction: ltr;
+}
+
+#ticket-detail .ticket-answers .user-comment .avatar,
+#ticket-detail .ticket-answers .admin-comment .avatar {
+    margin-top: 10px;
+}
+
+#ticket-detail .ticket-answers .admin-comment .avatar {
+    float: left;
+}
+
+#ticket-detail .ticket-answers .user-comment .content,
+#ticket-detail .ticket-answers .admin-comment .content {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 70%;
+}
+
+#ticket-detail .ticket-answers .user-comment .content {
+    background-color: #e2fce2;
+}
+
+#ticket-detail .ticket-answers .user-comment .text,
+#ticket-detail .ticket-answers .admin-comment .text {
+    line-height: 1.7em;
+}
+
+#ticket-detail .ticket-answers .admin-comment .content {
+    direction: rtl;
+    margin-left: 3.5em;
+    margin-right: 0;
+    line-height: 1.3em;
+}
